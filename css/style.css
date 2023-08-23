@@ -1,0 +1,60 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+.icon {
+  font-size: 40px;
+  margin: 10px;
+  animation: bounceAnimation 1s infinite alternate;
+}
+.icon-1 {
+  color: #007bff;
+}
+.icon-2 {
+  color: #ff5500;
+  animation-delay: 0.2s;
+}
+.icon-3 {
+  color: #00cc00;
+  animation-delay: 0.4s;
+}
+@keyframes bounceAnimation {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.boardMeeting {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../images/meeting02.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 80%; */
+  /* height: 70vh; */
+  margin: auto;
+}
+.illustration {
+  background-image: url("../images/illustrate03.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  /* margin: auto; */
+}
+.phone {
+  background-image: url("../images/mobile02.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  /* margin: auto; */
+}

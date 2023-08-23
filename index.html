@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dorry</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./src/input.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-50">
+    <div
+      class="section1 bg-[#00413f] max-sm:h-[110vh] max-md:h-screen md-fit w-full"
+    >
+      <header
+        class="w-full md:h-[15vh] flex items-center justify-center text-[#fff]"
+      >
+        <div class="content w-[80%] flex justify-between items-center">
+          <div class="logo flex items-center gap-2 pr-6">
+            <div
+              class="d w-[40px] h-[35px] bg-[#96aeac] flex items-end rounded-r-2xl"
+            >
+              <div
+                class="square w-[20px] h-[20px] bg-gray-200 shadow-2xl shadow-slate-800 border-none"
+              ></div>
+            </div>
+            <div>
+              <p class="text-white font-bold text-[20px] shadow-lg">Dorry</p>
+            </div>
+          </div>
+          <nav class="max-[830px]:hidden flex gap-12 items-center">
+            <p
+              class="hover:border-2 hover:rounded-[30px] hover:border-gray-400 hover:w-[180px] hover:h-[50px] flex justify-center items-center"
+            >
+              <a href="#" class="text-white">Pricing</a>
+            </p>
+            <p
+              class="hover:border-2 hover:rounded-[30px] hover:border-gray-400 hover:w-[180px] hover:h-[50px] flex justify-center items-center"
+            >
+              <a href="#" class="text-white">About</a>
+            </p>
+            <p
+              class="hover:border-2 hover:rounded-[30px] hover:border-gray-400 hover:w-[180px] hover:h-[50px] flex justify-center items-center"
+            >
+              <a href="#" class="text-white">Learn</a>
+            </p>
+            <p
+              class="hover:border-2 hover:rounded-[30px] hover:border-gray-400 hover:w-[180px] hover:h-[50px] flex justify-center items-center"
+            >
+              <a href="#" class="text-white">Corporate</a>
+            </p>
+            <p
+              class="hover:border-2 hover:rounded-[30px] hover:border-gray-400 hover:w-[180px] hover:h-[50px] flex justify-center items-center"
+            >
+              <a href="#" class="text-white">News</a>
+            </p>
+          </nav>
+          <button
+            class="max-[830px]:hidden hover:border-2 hover:rounded-[30px] hover:border-gray-400 w-[180px] h-[50px]"
+          >
+            Contact Us
+          </button>
+          <div id="menu" class="min-[831px]:hidden">
+            <i class="bi bi-list text-[32px]" onclick="showDropdown()"></i>
+          </div>
+        </div>
+      </header>
+
+      <div id="menuDropdown" class="hidden w-full h-fit justify-center">
+        <div
+          class="dropDown w-[90%] h-fit border shadow-lg bg-white text-[#00433f] rounded-lg pb-8 flex flex-col justify-center items-center my-8"
+        >
+          <div class="w-[95%] h-fit flex items-center justify-end">
+            <a href="" class="hover:text-white"
+              ><i
+                class="bi bi-x-square text-[45px]"
+                onclick="cancelDropdown()"
+              ></i
+            ></a>
+          </div>
+          <ul
+            class="flex flex-col items-center justify-center font-bold w-full"
+          >
+            <li
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] p-2 hover:text-white"
+            >
+              <a href="#" class="hover:text-white">PRICING</a>
+            </li>
+            <li
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] p-2 hover:text-white"
+            >
+              <a href="#" class="hover:text-white">ABOUT</a>
+            </li>
+            <li
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] p-2 hover:text-white"
+            >
+              <a href="#" class="hover:text-white">LEARN</a>
+            </li>
+            <li
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] p-2 hover:text-white"
+            >
+              <a href="#" class="hover:text-white">CORPORATE</a>
+            </li>
+            <li
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] p-2 hover:text-white"
+            >
+              <a href="#" class="hover:text-white">NEWS</a>
+            </li>
+            <div
+              class="hover:bg-[#00433f] hover:rounded-lg w-[95%] h-fit pt-3 hover:text-white text-center flex flex-col justify-center items-center"
+            >
+              <a href="#" class="hover:text-white">CONTACT US</a>
+              <div class="container">
+                <div class="icon icon-1">
+                  <i class="bi bi-facebook"></i>
+                </div>
+                <div class="icon icon-2">
+                  <i class="bi bi-twitter"></i>
+                </div>
+                <div class="icon icon-3">
+                  <i class="bi bi-instagram"></i>
+                </div>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+
+      <main class="w-full h-[100vh] flex justify-center mt-[100px]">
+        <div
+          class="content w-[90%] h-fit text-center text-[#fff] flex flex-col items-center"
+        >
+          <h1
+            class="sm:w-[85%] md:w-[70%] text-[35px] lg:text-[70px] sm:text-[50px] font-bold"
+          >
+            We create digital product and solve your problem
+          </h1>
+          <p class="w-[95%] md:w-[60%] text-[20px] my-2 md:mt-5">
+            A fully integrated digital agency that will help you create
+            beautiful website and solve your problem in your company
+          </p>
+          <div class="btns flex gap-3 my-6">
+            <button
+              class="flex justify-center items-center gap-2 w-[180px] h-[52px] rounded-[30px] hover:text-[18px] bg-white text-[#00433f] max-sm:w-[140px]"
+            >
+              <span>Get Started</span>
+              <span><i class="bi bi-arrow-right"></i></span>
+            </button>
+            <button
+              class="flex justify-center items-center gap-2 border text-[#fff] w-[180px] h-[52px] rounded-[30px] hover:text-[18px] max-sm:w-[140px]"
+            >
+              <span>Learn more</span>
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div
+      id="board-meeting"
+      class="w-full h-fit flex flex-col items-center md:absolute md:top-[90%]"
+    >
+      <div
+        class="boardMeeting content w-[90%] md:w-[80%] h-[80vh] flex justify-center items-center"
+      >
+        <div class="play">
+          <div
+            class="h-[100px] w-[100px] rounded-full flex justify-center items-center bg-[#251c19]"
+          >
+            <i
+              class="bi bi-play-fill text-[90px] text-white cursor-pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div
+        id="ratings"
+        class="relative mt-[50px] w-full h-[30vh] flex justify-center"
+      >
+        <div
+          class="content w-[90%] md:w-[80%] h-fit md:grid grid-cols-4 gap-4 text-center"
+        >
+          <div
+            class="max-md:border shadow flex flex-col justify-center items-center w-full h-[30vh] bg-white max-md:mt-6 rounded-lg max-md:py-2 gap-4"
+          >
+            <h1 class="text-[30px] text-black font-bold">2.5K +</h1>
+            <p class="text-gray-400">Job done successfully</p>
+          </div>
+          <div
+            class="max-md:border shadow flex flex-col justify-center items-center w-full h-[30vh] bg-white max-md:mt-6 rounded-lg max-md:py-2 gap-4"
+          >
+            <h1 class="text-[30px] text-black font-bold">2.2K +</h1>
+            <p class="text-gray-400">Happy Client</p>
+          </div>
+          <div
+            class="max-md:border shadow flex flex-col justify-center items-center w-full h-[30vh] bg-white max-md:mt-6 rounded-lg max-md:py-2 gap-4"
+          >
+            <h1 class="text-[30px] text-black font-bold">94%</h1>
+            <p class="text-gray-400">Daily Active Engagement</p>
+          </div>
+          <div
+            class="max-md:border shadow flex flex-col justify-center items-center w-full h-[30vh] bg-white max-md:mt-6 rounded-lg max-md:py-2 gap-4"
+          >
+            <h1 class="text-[30px] text-black font-bold">58 +</h1>
+            <p class="text-gray-400">Trusted by Company</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="services"
+      class="w-full h-fit flex flex-col items-center justify-center md:mt-[80vh] mt-[100vh]"
+    >
+      <div
+        class="content w-[90%] rounded-lg py-4 gap-4 md:w-[80%] h-fit max-md:bg-white max-md:border max-md:shadow-lg mt-[80px] mb-[20px] flex max-md:flex-col items-center md:justify-between justify-center max-md:text-center"
+      >
+        <div
+          class="left font-bold w-[100%] sm:w-[50%] md:w-[90%] lg:w-[60%] h-fit max-md:flex items-center flex-col max-md:justify-center max-md:items-center"
+        >
+          <div class="flex items-center gap-2">
+            <div class="line w-[30px] border-yellow-600 border-2 h-[0px]"></div>
+            <p class="text-yellow-600">Services</p>
+          </div>
+          <h1 class="max-md:text-[30px] md:text-[44px]">
+            Our service we can help you
+          </h1>
+        </div>
+        <div
+          class="right w-fit flex md:justify-end h-fit items-center max-md:flex-col max-md:justify-center max-md:items-center"
+        >
+          <p class="w-[85%] md:w-[75%] text-gray-500 text-[24px]">
+            We have many interesting services with professional team, that will
+            help your work to be better
+          </p>
+        </div>
+      </div>
+      <div
+        class="service-opts my-8 w-[90%] md:w-[80%] h-fit grid grid-rows-2 max-sm:grid-cols-1 max-[825px]:grid-cols-2 min-[826px]:grid-cols-3 gap-4"
+      >
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-aspect-ratio"></i>
+          </div>
+          <h1 class="text-[30px]">UI/UX DESIGN</h1>
+          <p class="text-gray-500 w-[85%]">
+            Create Landing Page, Mobile App, Dashboard, Prototyping, Wireframing
+          </p>
+        </div>
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-code-square"></i>
+          </div>
+          <h1 class="text-[30px]">Development</h1>
+
+          <p class="text-gray-500 w-[85%]">
+            Create Website and Responsive WEbsite by HTML/CSS, React, Webflow
+          </p>
+        </div>
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-body-text"></i>
+          </div>
+          <h1 class="text-[30px]">Content Writing</h1>
+          <p class="text-gray-500 w-[85%]">
+            Create beautifl word for website that will attract customers
+          </p>
+        </div>
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-amd"></i>
+          </div>
+          <h1 class="text-[30px]">Branding</h1>
+          <p class="text-gray-500 w-[85%]">
+            Create visual identity and marketing materials for your company
+          </p>
+        </div>
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-hexagon-fill"></i>
+          </div>
+          <h1 class="text-[30px]">Illustration</h1>
+          <p class="text-gray-500 w-[85%]">
+            Create character kit, empty state illustrate for your design
+          </p>
+        </div>
+        <div
+          class="shadow h-fit py-4 md:h-[55vh] bg-white mt-3 rounded-lg max-md:shadow-lg text-center flex flex-col items-center justify-center gap-2"
+        >
+          <div
+            class="icon w-[90px] h-[90px] rounded-full bg-[#f9f9f9] flex justify-center items-center"
+          >
+            <i class="text-[#00433f] bi bi-collection-play"></i>
+          </div>
+          <h1 class="text-[30px]">Motion Graphics</h1>
+          <p class="text-gray-500 w-[85%]">
+            Create motion graphics with smooth and high quality
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="howItWorks"
+      class="mt-[55px] w-full h-fit lg:h-[120vh] bg-[#00433f] flex justify-center items-center"
+    >
+      <div
+        class="content w-[90%] md:w-[80%] h-[50%] md:h-[80%] flex flex-col md:grid grid-cols-2 gap-4"
+      >
+        <div class="illustration h-full max-sm:hidden"></div>
+
+        <div
+          class="max-sm:my-4 max-sm:py-4 howTo h-full shadow-lg text-white flex justify-center items-center"
+        >
+          <div class="w-[90%] h-fit">
+            <div class="flex items-center gap-2">
+              <div
+                class="line w-[30px] border-yellow-600 border-1 h-[0px]"
+              ></div>
+              <p class="text-yellow-600">How it Work</p>
+            </div>
+            <h1 class="text-[40px] font-bold mt-4 mb-2">
+              Steps to get powerful services
+            </h1>
+            <div class="mt-[40px]">
+              <div>
+                <h4 class="font-bold">
+                  <b class="pr-4">1</b> Site map and user flow
+                </h4>
+                <p class="mt-2 text-gray-200 pl-[30px]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatibus, in!
+                </p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <div>
+                <h4 class="font-bold">
+                  <b class="pr-4">2</b> Site map and user flow
+                </h4>
+                <p class="mt-2 text-gray-200 pl-[30px]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatibus, in!
+                </p>
+              </div>
+            </div>
+            <div class="mt-8">
+              <div>
+                <h4 class="font-bold">
+                  <b class="pr-4">3</b> Site map and user flow
+                </h4>
+                <p class="mt-2 text-gray-200 pl-[30px]">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptatibus, in!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="products w-full h-fit">
+      <div
+        id="product-intro"
+        class="w-full h-[30vh] flex justify-center items-center"
+      >
+        <div class="w-[90%] h-fit flex flex-col justify-center items-cente">
+          <div class="flex justify-center items-center gap-2">
+            <div class="line w-[30px] border-yellow-600 border-1 h-[0px]"></div>
+            <p class="text-yellow-600">Product</p>
+          </div>
+          <h1 class="text-[35px] font-bold text-center">
+            Our product we've created before
+          </h1>
+        </div>
+      </div>
+      <div
+        id="product-items"
+        class="w-full lg:h-screen flex justify-center items-center"
+      >
+        <div
+          class="w-[90%] min-[900px]:w-[80%] h-fit min-[900px]:grid grid-cols-2 gap-4"
+        >
+          <div class="phone h-full bg-gray-300 max-md:my-4"></div>
+          <div
+            class="projects h-full grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-4"
+          >
+            <div class="">
+              <figure class="">
+                <img class="shadow" src="images/fashion002.png" alt="" />
+                <figcaption class="my-4 w-[95%]">
+                  <h4 class="font-bold text-[18px]">Fashion Landing Page</h4>
+                  <p class="mt-2 text-gray-500">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat, provident? Ad, est.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="">
+              <figure class="">
+                <img class="shadow" src="images/insurance.jpg" alt="" />
+                <figcaption class="my-4 w-[95%]">
+                  <h4 class="font-bold text-[18px]">Insurance Landing Page</h4>
+                  <p class="mt-2 text-gray-500">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat, provident? Ad, est.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="">
+              <figure class="">
+                <img class="shadow" src="images/dashboard02.png" alt="" />
+                <figcaption class="my-4 w-[95%]">
+                  <h4 class="font-bold text-[18px]">NFT Dashboard</h4>
+                  <p class="mt-2 text-gray-500">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat, provident? Ad, est.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="">
+              <figure class="">
+                <img class="shadow" src="images/phonemain.jpg" alt="" />
+                <figcaption class="my-4 w-[95%]">
+                  <h4 class="font-bold text-[18px]">Donation Mobile App</h4>
+                  <p class="mt-2 text-gray-500">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Quaerat, provident? Ad, est.
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="testimonials-section"
+      class="w-full h-fit flex justify-center items-center"
+    >
+      <div
+        class="content w-[90%] md:w-[80%] h-fit my-4 max-md:flex max-md:flex-col max-md:items-center"
+      >
+        <div class="flex items-center gap-2">
+          <div class="line w-[30px] border-yellow-600 border-1 h-[0px]"></div>
+          <p class="text-yellow-600">Testimonials</p>
+        </div>
+        <h4 class="text-[35px] font-bold md:w-[40%] max-md:text-center mt-4">
+          What our clients say about us
+        </h4>
+        <div
+          class="testimonials mt-[80px] h-fit grid max-md:grid-cols-1 grid-cols-3 gap-4"
+        >
+          <div
+            class="border shadow-lg h-fit py-3 hover:bg-white flex justify-center items-center"
+          >
+            <div class="w-[90%] md:h-[80%] max-sm:py-4">
+              <div class="quote">
+                <i class="bi bi-quote text-[45px] text-gray-400"></i>
+              </div>
+              <p class="text-gray-500 leading-7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates labore natus fugiat est, repellat recusandae soluta
+                voluptatem!
+              </p>
+              <ul class="flex justify-between mt-8">
+                <li class="leading-8">
+                  <h4 class="font-bold">Rizal Kenz</h4>
+                  <p class="text-gray-500 text-[15px]">CEO Tradingkuy</p>
+                </li>
+                <li class="flex gap-2">
+                  <i class="bi bi-star-fill text-yellow-500"></i>
+                  <p>4.8</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border h-fit py-3 shadow-lg hover:bg-white flex justify-center items-center"
+          >
+            <div class="w-[90%] md:h-[80%] max-sm:py-4">
+              <div class="quote">
+                <i class="bi bi-quote text-[45px] text-gray-400"></i>
+              </div>
+              <p class="text-gray-500 leading-7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates labore natus fugiat est, repellat recusandae soluta
+                voluptatem!
+              </p>
+              <ul class="flex justify-between mt-8">
+                <li class="leading-8">
+                  <h4 class="font-bold">Mikami Yue</h4>
+                  <p class="text-gray-500 text-[15px]">Founder Hiroshima LLC</p>
+                </li>
+                <li class="flex gap-2">
+                  <i class="bi bi-star-fill text-yellow-500"></i>
+                  <p>4.8</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border h-fit py-3 shadow-lg hover:bg-white flex justify-center items-center"
+          >
+            <div class="w-[90%] md:h-[80%] max-sm:py-4">
+              <div class="quote">
+                <i class="bi bi-quote text-[45px] text-gray-400"></i>
+              </div>
+              <p class="text-gray-500 leading-7">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates labore natus fugiat est, repellat recusandae soluta
+                voluptatem!
+              </p>
+              <ul class="flex justify-between mt-8">
+                <li class="leading-8">
+                  <h4 class="font-bold">Mohammad Draken</h4>
+                  <p class="text-gray-500 text-[15px]">Founder Touman</p>
+                </li>
+                <li class="flex gap-2">
+                  <i class="bi bi-star-fill text-yellow-500"></i>
+                  <p>4.8</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="my-[40px] btns flex justify-center gap-2">
+          <div class="w-[15px] h-[15px] bg-[#00433f] rounded-full"></div>
+          <div
+            class="w-[15px] h-[15px] bg-gray-400 hover:bg-[#00433f] rounded-full"
+          ></div>
+          <div
+            class="w-[15px] h-[15px] bg-gray-400 hover:bg-[#00433f] rounded-full"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <footer
+      class="w-full h-fit md:h-screen bg-[#00433f] flex justify-center items-center text-white"
+    >
+      <div class="content w-[80%] h-[90%]">
+        <div
+          class="w-[100%] max-md:py-6 md:h-[30%] border-b border-gray-500 md:flex justify-between items-center"
+        >
+          <div>
+            <h1 class="text-[35px] font-bold md:w-[80%]">
+              Are you interested to work with us?
+            </h1>
+          </div>
+
+          <div class="btns flex gap-3 my-6">
+            <button
+              class="flex justify-center items-center gap-2 w-[180px] h-[52px] rounded-[30px] hover:text-[18px] bg-white text-[#00433f] max-sm:w-[140px]"
+            >
+              <span>Let's Chat</span>
+              <span><i class="bi bi-arrow-up-right text-[15px]"></i></span>
+            </button>
+            <button
+              class="flex justify-center items-center gap-2 border text-[#fff] w-[180px] h-[52px] rounded-[30px] hover:text-[18px] max-sm:w-[140px]"
+            >
+              <span>Shedule Meet</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="my-[70px] lg:grid grid-cols-2">
+          <div class="">
+            <div class="logo flex items-center gap-2 pr-6">
+              <div
+                class="d w-[40px] h-[35px] bg-[#96aeac] flex items-end rounded-r-2xl"
+              >
+                <div
+                  class="square w-[20px] h-[20px] bg-gray-200 shadow-2xl shadow-slate-800 border-none"
+                ></div>
+              </div>
+              <div>
+                <p class="text-white font-bold text-[20px] shadow-lg">Dorry</p>
+              </div>
+            </div>
+            <p class="mt-8 text-gray-300 leading-7">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+              exercitationem assumenda numquam ex, libero vitae.
+            </p>
+          </div>
+          <div
+            class="max-md:mt-4 max-md:grid grid-cols-2 grid-rows-2 md:flex md:justify-between"
+          >
+            <ul class="flex flex-col gap-3">
+              <li class="text-[20px] font-bold text-white">Company</li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Our Work</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Services</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Community</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Career</a
+                >
+              </li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="text-[20px] font-bold text-white">Resources</li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Help Center</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Blog</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="text-[20px] font-bold text-white">Links</li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Pricing</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >About</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Learn</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Corporate</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >News</a
+                >
+              </li>
+            </ul>
+
+            <ul class="flex flex-col gap-3">
+              <li class="text-[20px] font-bold text-white">Follow Us</li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Dribble</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Instagram</a
+                >
+              </li>
+              <li class="text-gray-200">
+                <a href="#" class="hover:text-gray-300 hover:text-[18px]"
+                  >Twitter</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
